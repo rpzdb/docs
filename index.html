@@ -262,7 +262,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <p>You may list collection of zones using this action.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-     --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
+     --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
   <span class="s1">'http://manage.rpzdb.com/api/v1/zones'</span>
 </code></pre>
 <blockquote>
@@ -342,7 +342,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --request POST <span class="se">\</span>
      --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-     --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
+     --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
      --data-binary <span class="s2">"{
     </span><span class="se">\"</span><span class="s2">zone_name</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">labs.com.my</span><span class="se">\"</span><span class="s2">,
     </span><span class="se">\"</span><span class="s2">description</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">this is new domain</span><span class="se">\"</span><span class="s2">
@@ -381,7 +381,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <p>You may list a zone using this action.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
-     --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
+     --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
   <span class="s1">'http://manage.rpzdb.com/api/v1/zones/91'</span>
 </code></pre>
 <blockquote>
@@ -433,7 +433,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --request DELETE <span class="se">\</span>
      --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-     --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
+     --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
   <span class="s1">'http://manage.rpzdb.com/api/v1/zones/91'</span>
 </code></pre>
 <p>The above command returns JSON structured like this:</p>
@@ -455,7 +455,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h2 id="get-all-hosts">Get All Hosts</h2>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
-     --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
+     --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
   <span class="s1">'http://manage.rpzdb.com/api/v1/hosts'</span>
 </code></pre>
 <blockquote>
@@ -484,7 +484,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h2 id="get-a-host">Get a Host</h2>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
-     --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
+     --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
   <span class="s1">'http://manage.rpzdb.com/api/v1/hosts/2'</span>
 </code></pre>
 <blockquote>
@@ -523,7 +523,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h2 id="delete-a-host">Delete a Host</h2>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
-     --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
+     --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
      --request DELETE <span class="se">\</span>
   <span class="s1">'http://manage.rpzdb.com/api/v1/hosts/2'</span>
 </code></pre>
