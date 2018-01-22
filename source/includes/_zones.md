@@ -1,6 +1,6 @@
-# Zones
+# RPZ Zones
 
-## List all Zones
+## List all RPZ Zones
 You may list collection of zones using this action.
 
 ```shell
@@ -42,7 +42,7 @@ This endpoint get list of zones.
 `GET http://manage.rpzdb.com/api/v1/zones`
 
 
-## Create Zone
+## Create RPZ Zone
 
 You may create a zone using this action. It takes a JSON object containing a parameters.
 
@@ -122,7 +122,7 @@ statement[] | Contains notify statement
 
 
 
-## Show Zone
+## Show RPZ Zone
 
 You may list a zone using this action.
 
@@ -192,7 +192,7 @@ tsig[secret] | Transaction signature secret
 statement[] | Contains notify statement
 
 
-## Delete Zone
+## Delete RPZ Zone
 
 You may delete a zone using this action.
 

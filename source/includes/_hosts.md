@@ -1,6 +1,6 @@
-# Hosts
+# Blacklist
 
-## List All Hosts
+## List All Blacklist
 You may list collection of hosts using this action.
 
 
@@ -44,7 +44,7 @@ This endpoint retrieves all hosts.
 
 `GET http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts`
 
-## Create Zone
+## Create Blacklist
 
 You may create a host using this action. It takes a JSON object containing a parameters.
 
@@ -106,7 +106,7 @@ created_at | Date and time created
 updated_at |  Date and time updated
 
 
-## Show Host
+## Show Blacklist
 
 
 ```shell
@@ -157,7 +157,7 @@ tags | Tagging associate with the host
 created_at | Date and time created
 updated_at |  Date and time updated
 
-## Delete Host
+## Delete Blacklist
 ```shell
 curl --include \
      --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
