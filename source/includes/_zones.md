@@ -181,7 +181,8 @@ Parameter | Description
 id | The ID of the zone to show
 
 ### RESPONSE PARAMETER
-
+Parameter | Description
+--------- | -----------
 id | The ID of the selected zone
 zone_name | Selected zone name
 combine | Combined of zone name

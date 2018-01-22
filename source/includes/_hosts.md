@@ -66,27 +66,15 @@ curl --include \
 
 ```json
 {
-    "id": 62,
-    "zone_name": "blackhole",
-    "combine": "blackhole.ap-southeast.rpzdb.com",
-    "server_name": "ap-southeast.rpzdb.com",
-    "server_ip": "175.41.131.248",
-    "created_at": "2018-01-22T13:02:19Z",
-    "updated_at": "2018-01-22T13:02:19Z",
-    "tsig": {
-        "id": 23,
-        "keyname": "blackhole",
-        "algorithm": "HMAC-SHA1",
-        "algorithm_size": "128",
-        "secret": "KW7qFUTKrKWr+J4qJTKkEw=="
-    },
-    "statements": [
-        {
-            "id": 33,
-            "statement": "also-notify",
-            "address": "192.168.3.1",
-            "port": 53
-        }
+    "id": 361,
+    "blacklist_data": "malam.demo.my",
+    "created_at": "2018-01-22T15:14:56Z",
+    "updated_at": "2018-01-22T15:14:56Z",
+    "record_type": "A",
+    "content": "1.1.1.1",
+    "tags": [
+        "yolo",
+        "hello"
     ]
 }
 ```
@@ -97,7 +85,25 @@ This endpoint create a zone.
 
 `POST http://manage.rpzdb.com/api/v1/zones`
 
+### URL PARAMETER
 
+Parameter | Description
+--------- | -----------
+id | The ID of the host to delete
+blacklist_data | Blacklist data
+record_type | Record Type
+destination | Destination
+user_tag_list | Tagging associate with the host
+### RESPONSE PARAMETER
+Parameter | Description
+--------- | -----------
+id | The ID of the selected host
+blacklist_data | Blacklist data
+record_type | Record Type
+content | Record data
+tags | Tagging associate with the host
+created_at | Date and time created
+updated_at |  Date and time updated
 
 
 ## Show Host
@@ -134,11 +140,22 @@ This endpoint retrieves a host.
 
 `GET http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts/:id`
 
-### URL Parameters
+### URL PARAMETER
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the host to retrieve
+id | The ID of the host to delete
+
+### RESPONSE PARAMETER
+Parameter | Description
+--------- | -----------
+id | The ID of the selected host
+blacklist_data | Blacklist data
+record_type | Record Type
+content | Record data
+tags | Tagging associate with the host
+created_at | Date and time created
+updated_at |  Date and time updated
 
 ## Delete Host
 ```shell
@@ -171,9 +188,21 @@ This endpoint delete a host.
 
 `DELETE http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts/:id`
 
-### URL Parameters
+### URL PARAMETER
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the host to delete
+id | The ID of the host to delete
+
+### RESPONSE PARAMETER
+Parameter | Description
+--------- | -----------
+id | The ID of the selected host
+blacklist_data | Blacklist data
+record_type | Record Type
+content | Record data
+tags | Tagging associate with the host
+created_at | Date and time created
+updated_at |  Date and time updated
+message | Message from server
 
