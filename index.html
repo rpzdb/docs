@@ -263,7 +263,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
      --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
-  <span class="s1">'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones'</span>
+  <span class="s1">'http://manage.rpzdb.com/api/v1/zones'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -313,21 +313,6 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
         </span><span class="s2">"serial_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-03T03:04:49.595Z"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-03T03:04:49.688Z"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">82</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"zone_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"meee.my"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"view_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"zone_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"master"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"processing_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"backend_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"delete_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"serial_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-03T03:06:42.428Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-03T03:06:42.428Z"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -335,7 +320,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones</code></p>
+<p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/zones</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
@@ -362,7 +347,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
     </span><span class="se">\"</span><span class="s2">zone_name</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">labs.com.my</span><span class="se">\"</span><span class="s2">,
     </span><span class="se">\"</span><span class="s2">description</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">this is new domain</span><span class="se">\"</span><span class="s2">
 }"</span> <span class="se">\</span>
-<span class="s1">'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones'</span>
+<span class="s1">'http://manage.rpzdb.com/api/v1/zones'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -390,14 +375,14 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones</code></p>
+<p><code class="prettyprint">POST http://manage.rpzdb.com/api/v1/zones</code></p>
 
 <h2 id="show-zone">Show Zone</h2>
 
 <p>You may list a zone using this action.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
-  <span class="s1">'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones/91'</span>
+  <span class="s1">'http://manage.rpzdb.com/api/v1/zones/91'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -440,7 +425,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">PUT http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones/update_status</code></p>
+<p><code class="prettyprint">PUT http://manage.rpzdb.com/api/v1/zones/:id</code></p>
 
 <h2 id="delete-zone">Delete Zone</h2>
 
@@ -449,7 +434,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
      --request DELETE <span class="se">\</span>
      --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
      --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
-  <span class="s1">'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones/91'</span>
+  <span class="s1">'http://manage.rpzdb.com/api/v1/zones/91'</span>
 </code></pre>
 <p>The above command returns JSON structured like this:</p>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
@@ -464,7 +449,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">DELETE http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id</code></p>
+<p><code class="prettyprint">DELETE http://manage.rpzdb.com/api/v1/zones/:id</code></p>
 
           <h1 id="hosts">Hosts</h1>
 
