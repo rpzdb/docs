@@ -143,7 +143,7 @@ This endpoint retrieves a host.
 
 Parameter | Description
 --------- | -----------
-id | The ID of the host to delete
+id | The ID of the host to retrieve
 
 ### RESPONSE PARAMETER
 Parameter | Description
