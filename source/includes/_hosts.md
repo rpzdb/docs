@@ -1,12 +1,13 @@
 # Hosts
 
-## Get All Hosts
+## List All Hosts
+You may list collection of hosts using this action.
 
 
 ```shell
 curl --include \
      --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
-  'http://manage.rpzdb.com/api/v1/hosts'
+  'http://manage.rpzdb.com/api/v1/zones/36/hosts'
 ```
 
 > The above command returns JSON structured like this:
@@ -14,16 +15,25 @@ curl --include \
 ```json
 [
     {
-        {
-            "id": 5,
-            "node_name": "elastic2.dnsvault.net",
-            "description": null,
-            "created_at": "2016-06-22T16:10:10.602Z",
-            "updated_at": "2016-06-22T16:10:10.602Z",
-            "tag": "agent",
-            "fingerprint": "64:9E:06:F0:0C:AB:0F:63:2B:0D:DC:C6:E2:DF:BE:33:8F:69:3C:A0:99:D8:1F:65:76:AE:EA:DA:C6:64:12:3F",
-            "fingerprint_algorithm": "SHA256"
-        }
+        "id": 344,
+        "blacklist_data": "lalalax.com",
+        "created_at": "2018-01-22T08:59:51Z",
+        "updated_at": "2018-01-22T11:06:12Z",
+        "record_type": "A",
+        "content": "2.2.2.2",
+        "tags": [
+            "yolo",
+            "hello"
+        ]
+    },
+    {
+        "id": 346,
+        "blacklist_data": "pp.my",
+        "created_at": "2018-01-22T09:25:55Z",
+        "updated_at": "2018-01-22T09:25:55Z",
+        "record_type": "A",
+        "content": "1.3.4.5",
+        "tags": []
     }
 ]
 ```
@@ -32,17 +42,71 @@ This endpoint retrieves all hosts.
 
 ### HTTP Request
 
-`GET http://manage.rpzdb.com/api/v1/hosts`
+`GET http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts`
+
+## Create Zone
+
+You may create a host using this action. It takes a JSON object containing a parameters.
+
+```shell
+curl --include \
+     --request POST \
+     --header "Content-Type: application/json" \
+     --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
+     --data-binary "{
+    \"blacklist_data\": \"labs.com.my\",
+    \"record_type\": \"1\",
+    \"destination\": \"1.1.1.1\",
+    \"user_tag_list\": \"danger,underated\"
+}" \
+'http://manage.rpzdb.com/api/v1/zones/36'
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": 62,
+    "zone_name": "blackhole",
+    "combine": "blackhole.ap-southeast.rpzdb.com",
+    "server_name": "ap-southeast.rpzdb.com",
+    "server_ip": "175.41.131.248",
+    "created_at": "2018-01-22T13:02:19Z",
+    "updated_at": "2018-01-22T13:02:19Z",
+    "tsig": {
+        "id": 23,
+        "keyname": "blackhole",
+        "algorithm": "HMAC-SHA1",
+        "algorithm_size": "128",
+        "secret": "KW7qFUTKrKWr+J4qJTKkEw=="
+    },
+    "statements": [
+        {
+            "id": 33,
+            "statement": "also-notify",
+            "address": "192.168.3.1",
+            "port": 53
+        }
+    ]
+}
+```
+
+This endpoint create a zone.
+
+### HTTP Request
+
+`POST http://manage.rpzdb.com/api/v1/zones`
 
 
 
-## Get a Host
+
+## Show Host
 
 
 ```shell
 curl --include \
      --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
-  'http://manage.rpzdb.com/api/v1/hosts/2'
+  'http://manage.rpzdb.com/api/v1/zones/36/hosts/359'
 ```
 
 
@@ -50,35 +114,38 @@ curl --include \
 
 ```json
 {
-  "id": 2,
-  "node_name": "elastic2.dnsvault.net",
-  "description": null,
-  "created_at": "2016-06-22T16:10:10.602Z",
-  "updated_at": "2016-06-22T16:10:10.602Z",
-  "tag": "agent",
-  "fingerprint": "64:9E:06:F0:0C:AB:0F:63:2B:0D:DC:C6:E2:DF:BE:33:8F:69:3C:A0:99:D8:1F:65:76:AE:EA:DA:C6:64:12:3F",
-  "fingerprint_algorithm": "SHA256"
+    "id": 359,
+    "blacklist_data": "faraa.demo.my",
+    "created_at": "2018-01-22T10:10:11Z",
+    "updated_at": "2018-01-22T10:38:07Z",
+    "record_type": "A",
+    "content": "1.1.1.100",
+    "tags": [
+        "yolo",
+        "hello",
+        "ajajja"
+    ]
 }
 ```
 
-This endpoint retrieves a node.
+This endpoint retrieves a host.
 
 ### HTTP Request
 
-`GET http://manage.rpzdb.com/api/v1/hosts/:id`
+`GET http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts/:id`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the node to retrieve
+ID | The ID of the host to retrieve
 
-## Delete a Host
+## Delete Host
 ```shell
 curl --include \
      --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
      --request DELETE \
-  'http://manage.rpzdb.com/api/v1/hosts/2'
+  'http://manage.rpzdb.com/api/v1/zones/36/hosts/2'
 ```
 
 
@@ -86,22 +153,27 @@ curl --include \
 
 ```json
 {
-  "success": {
-    "7005": "Host has been deleted"
-  }
+    "id": 359,
+    "blacklist_data": "faraa.demo.my",
+    "created_at": "2018-01-22T10:10:11Z",
+    "updated_at": "2018-01-22T10:38:07Z",
+    "record_type": null,
+    "content": null,
+    "tags": [],
+    "message": "Host Deleted!"
 }
 ```
 
-This endpoint delete a node.
+This endpoint delete a host.
 
 
 ### HTTP Request
 
-`DELETE http://manage.rpzdb.com/api/v1/hosts/:id`
+`DELETE http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts/:id`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the node to delete
+ID | The ID of the host to delete
 
