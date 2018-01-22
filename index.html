@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Rpzdb - API Reference</title>
+    <title>RPZdb - API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -219,8 +219,8 @@
       <div id="toc">
       </div>
         <ul class="toc-footer">
-            <li><a href='developer.dnsvalt.net/sign_in'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://dnsvault.github.op'>Visit Site</a></li>
+            <li><a href='www.rpzdb.com/sign_in'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://www.rpzdb.com'>Visit Site</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -228,7 +228,7 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to the Rpzdb API! You can use our API to access Rpzdb API endpoints, which can get information on nodes, views, zones, records and others that is related to our Rpzdb Appliance. </p>
+<p>Welcome to the RPZdb API! You can use our API to access RPZdb API endpoints, which can get information on nodes, views, zones, records and others that is related to our RPZdb Appliance. </p>
 
 <p>We have language bindings in Shell! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
@@ -238,18 +238,18 @@
 <p>To authorize, use this code:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: iwwTXK54aahsosrx5JK7hkTe"</span>
+curl <span class="s2">"rpzdb.com"</span>
+  -H <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span>
 </code></pre>
 <blockquote>
 <p>Make sure to replace <code class="prettyprint">iwwTXK54aahsosrx5JK7hkTe</code> with your API key.</p>
 </blockquote>
 
-<p>Rpzdb uses API keys to allow access to the API. You can register a new Rpzdb API key at our <a href="http://www.dnsvault.net/developers">developer portal</a>.</p>
+<p>RPZdb uses API keys to allow access to the API. You can register a new RPZdb API key at our <a href="http://manage.rpzdb.com/developers">developer portal</a>.</p>
 
-<p>Rpzdb expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>RPZdb expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p><code class="prettyprint">Authorization: iwwTXK54aahsosrx5JK7hkTe</code></p>
+<p><code class="prettyprint">Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe</code></p>
 
 <aside class="notice">
 You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API key.
@@ -263,7 +263,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
      --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
-  <span class="s1">'http://www.dnsvault.net/api/v1/nodes/2/dns/views/50/zones'</span>
+  <span class="s1">'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -335,7 +335,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://www.dnsvault.net/api/v1/nodes/:node_id/dns/views/:view_id/zones</code></p>
+<p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
@@ -362,7 +362,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
     </span><span class="se">\"</span><span class="s2">zone_name</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">labs.com.my</span><span class="se">\"</span><span class="s2">,
     </span><span class="se">\"</span><span class="s2">description</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">this is new domain</span><span class="se">\"</span><span class="s2">
 }"</span> <span class="se">\</span>
-<span class="s1">'http://www.dnsvault.net/api/v1/nodes/2/dns/views/50/zones'</span>
+<span class="s1">'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -390,14 +390,14 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://www.dnsvault.net/api/v1/nodes/:node_id/dns/views/:view_id/zones</code></p>
+<p><code class="prettyprint">POST http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones</code></p>
 
 <h2 id="show-zone">Show Zone</h2>
 
 <p>You may list a zone using this action.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
-  <span class="s1">'http://www.dnsvault.net/api/v1/nodes/2/dns/views/50/zones/91'</span>
+  <span class="s1">'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones/91'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -440,102 +440,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://www.dnsvault.net/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id</code></p>
-
-<h2 id="show-zone-status">Show Zone Status</h2>
-
-<p>You may list a zone using this action.</p>
-<pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
-     --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
-  <span class="s1">'http://www.dnsvault.net/api/v1/nodes/2/dns/views/50/zones/91'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">91</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"zone_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"labs.com.my"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"view_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is new domain"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"zone_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"master"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"processing_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"backend_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"delete_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"serial_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-11T10:22:22.567Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-11T10:22:22.598Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"view"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"node_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"view_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cloudlocal"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-31T09:17:41.743Z"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-31T09:17:41.766Z"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"node"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"node_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dnsvnode1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"this is node1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"agent"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fingerprint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EF:41:67:B5:52:F7:1F:D2:67:B3:48:99:89:0C</span><span class="se">\n</span><span class="s2">:6E:FE:F2:D7:5C:E5:34:38:14:26:1F:D3:D9:AD:02:2E:53:1C"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"fingerprint_algorithm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SHA256"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint get list of zones.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://www.dnsvault.net/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id</code></p>
-
-<h2 id="update-zone-status">Update Zone Status</h2>
-
-<p>You may update a zone using this action.</p>
-<pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
-     --request PUT <span class="se">\</span>
-     --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-     --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
-     --data-binary <span class="s2">"{
-    </span><span class="se">\"</span><span class="s2">node_name</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">integer</span><span class="se">\"</span><span class="s2">,
-    </span><span class="se">\"</span><span class="s2">view_name</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">internal</span><span class="se">\"</span><span class="s2">,
-    </span><span class="se">\"</span><span class="s2">zone_name</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">amir.my</span><span class="se">\"</span><span class="s2">,
-    </span><span class="se">\"</span><span class="s2">zone</span><span class="se">\"</span><span class="s2">: 
-        </span><span class="se">\"</span><span class="s2">status</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">true</span><span class="se">\"</span><span class="s2">,
-        </span><span class="se">\"</span><span class="s2">processing_status</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">false</span><span class="se">\"</span><span class="s2">,
-        </span><span class="se">\"</span><span class="s2">backend_status</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">true</span><span class="se">\"</span><span class="s2">,
-        </span><span class="se">\"</span><span class="s2">serial_number</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">123123123</span><span class="se">\"</span><span class="s2">,
-}"</span> <span class="se">\</span>
-<span class="s1">'http://www.dnsvault.net/api/v1/nodes/2/dns/views/50/zones/update_status'</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"view_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"zone_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amir.my"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Amir's domain name"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"zone_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"master"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"processing_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"backend_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"delete_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"boolean"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-22T10:42:33.802Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-12-22T10:42:38.387Z"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint get list of zones.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">PUT http://www.dnsvault.net/api/v1/nodes/:node_id/dns/views/:view_id/zones/update_status</code></p>
+<p><code class="prettyprint">PUT http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones/update_status</code></p>
 
 <h2 id="delete-zone">Delete Zone</h2>
 
@@ -544,7 +449,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
      --request DELETE <span class="se">\</span>
      --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
      --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
-  <span class="s1">'http://www.dnsvault.net/api/v1/nodes/2/dns/views/50/zones/91'</span>
+  <span class="s1">'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones/91'</span>
 </code></pre>
 <p>The above command returns JSON structured like this:</p>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
@@ -559,14 +464,14 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">DELETE http://www.dnsvault.net/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id</code></p>
+<p><code class="prettyprint">DELETE http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id</code></p>
 
           <h1 id="hosts">Hosts</h1>
 
 <h2 id="get-all-hosts">Get All Hosts</h2>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
-  <span class="s1">'http://www.dnsvault.net/api/v1/hosts'</span>
+  <span class="s1">'http://manage.rpzdb.com/api/v1/hosts'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -590,12 +495,12 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://www.dnsvault.net/api/v1/hosts</code></p>
+<p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/hosts</code></p>
 
 <h2 id="get-a-host">Get a Host</h2>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
-  <span class="s1">'http://www.dnsvault.net/api/v1/hosts/2'</span>
+  <span class="s1">'http://manage.rpzdb.com/api/v1/hosts/2'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -615,7 +520,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://www.dnsvault.net/api/v1/hosts/:id</code></p>
+<p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/hosts/:id</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
@@ -635,7 +540,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Authorization: Token iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
      --request DELETE <span class="se">\</span>
-  <span class="s1">'http://www.dnsvault.net/api/v1/hosts/2'</span>
+  <span class="s1">'http://manage.rpzdb.com/api/v1/hosts/2'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -650,7 +555,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">DELETE http://www.dnsvault.net/api/v1/hosts/:id</code></p>
+<p><code class="prettyprint">DELETE http://manage.rpzdb.com/api/v1/hosts/:id</code></p>
 
 <h3 id="url-parameters">URL Parameters</h3>
 
