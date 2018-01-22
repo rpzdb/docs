@@ -114,11 +114,17 @@ Parameter | Description
 --------- | -----------
 id | The ID of the selected zone
 zone_name | Selected zone name
-combine | 
-server_name |
-server_ip | 
-created_at | 
-updated_at | 
+combine | Combined of zone name
+server_name | Server name
+server_ip | Server ip address
+created_at | Date and time created
+updated_at |  Date and time updated
+tsig[id] | Transaction signature id
+tsig[keyname] | Transaction signature keyname
+tsig[algorithm] | Transaction signature algorithm
+tsig[algorithm_size] | Transaction signature size
+tsig[secret] | Transaction signature secret
+statement[] | Contains notify statement
 
 
 
@@ -176,18 +182,19 @@ id | The ID of the zone to show
 
 ### RESPONSE PARAMETER
 
-Parameter | Description
---------- | -----------
 id | The ID of the selected zone
 zone_name | Selected zone name
-combine | 
-server_name |
-server_ip | 
-created_at | 
-updated_at | 
-
-
-
+combine | Combined of zone name
+server_name | Server name
+server_ip | Server ip address
+created_at | Date and time created
+updated_at |  Date and time updated
+tsig[id] | Transaction signature id
+tsig[keyname] | Transaction signature keyname
+tsig[algorithm] | Transaction signature algorithm
+tsig[algorithm_size] | Transaction signature size
+tsig[secret] | Transaction signature secret
+statement[] | Contains notify statement
 
 
 ## Delete Zone
