@@ -104,6 +104,14 @@ tags | Tagging associate with the host
 created_at | Date and time created
 updated_at |  Date and time updated
 
+### Record Type
+
+Value | Description
+--------- | -----------
+1 | A 
+2 | CNAME
+3 | NXDOMAIN
+4 | NODATA
 
 ## Show Blacklist
 
