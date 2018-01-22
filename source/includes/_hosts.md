@@ -108,7 +108,7 @@ updated_at |  Date and time updated
 
 Value | Description
 --------- | -----------
-1 | A 
+1 | A or AAAA
 2 | CNAME
 3 | NXDOMAIN
 4 | NODATA
