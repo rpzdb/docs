@@ -59,7 +59,7 @@ curl --include \
     \"destination\": \"1.1.1.1\",
     \"user_tag_list\": \"danger,underated\"
 }" \
-'http://manage.rpzdb.com/api/v1/zones/36'
+'http://manage.rpzdb.com/api/v1/zones/36/hosts'
 ```
 
 > The above command returns JSON structured like this:
@@ -83,13 +83,12 @@ This endpoint create a zone.
 
 ### HTTP Request
 
-`POST http://manage.rpzdb.com/api/v1/zones`
+`POST http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts`
 
 ### URL PARAMETER
 
 Parameter | Description
 --------- | -----------
-id | The ID of the host to delete
 blacklist_data | Blacklist data
 record_type | Record Type
 destination | Destination

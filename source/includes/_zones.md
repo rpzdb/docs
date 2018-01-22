@@ -1,7 +1,7 @@
 # RPZ Zones
 
 ## List all RPZ Zones
-You may list collection of zones using this action.
+You may list collection of rpz zones using this action.
 
 ```shell
 curl --include \
@@ -35,7 +35,7 @@ curl --include \
 ]
 ```
 
-This endpoint get list of zones.
+This endpoint get list of  rpz zones.
 
 ### HTTP Request
 
@@ -44,7 +44,7 @@ This endpoint get list of zones.
 
 ## Create RPZ Zone
 
-You may create a zone using this action. It takes a JSON object containing a parameters.
+You may create a rpz zone using this action. It takes a JSON object containing a parameters.
 
 ```shell
 curl --include \
@@ -54,7 +54,7 @@ curl --include \
      --data-binary "{
   \"zone_name\": \"blackhole\",
   \"site_ip\": \"192.168.3.1\",
-  \"server\": \"ap-southeast.rpzdb.com\"
+  \"feed_server\": \"ap-southeast.rpzdb.com\"
 }" \
 'http://manage.rpzdb.com/api/v1/zones'
 ```
@@ -88,7 +88,7 @@ curl --include \
 }
 ```
 
-This endpoint create a zone.
+This endpoint create a rpz zone.
 
 ### HTTP Request
 
@@ -98,9 +98,9 @@ This endpoint create a zone.
 
 Parameter | Description
 --------- | -----------
-id | The ID of the zone to retrieve
+zone_name | The ID of the zone to retrieve
 site_ip | DNS server ip destination
-server | Blacklist provider server address
+feed_server | Blacklist provider server address
 
 ### RESPONSE PARAMETER
 
