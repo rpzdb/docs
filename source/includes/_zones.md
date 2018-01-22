@@ -105,7 +105,20 @@ This endpoint create a zone.
 Parameter | Description
 --------- | -----------
 id | The ID of the zone to retrieve
+site_ip | DNS server ip destination
+server | Blacklist provider server address
 
+### RESPONSE PARAMETER
+
+Parameter | Description
+--------- | -----------
+id | The ID of the selected zone
+zone_name | Selected zone name
+combine | 
+server_name |
+server_ip | 
+created_at | 
+updated_at | 
 
 
 
@@ -155,11 +168,27 @@ This endpoint get list of zones.
 
 `PUT http://manage.rpzdb.com/api/v1/zones/:id`
 
-### REQUIRED ARGUMENTS
+### URL PARAMETER
 
 Parameter | Description
 --------- | -----------
 id | The ID of the zone to show
+
+### RESPONSE PARAMETER
+
+Parameter | Description
+--------- | -----------
+id | The ID of the selected zone
+zone_name | Selected zone name
+combine | 
+server_name |
+server_ip | 
+created_at | 
+updated_at | 
+
+
+
+
 
 ## Delete Zone
 
@@ -189,8 +218,16 @@ This endpoint delete a zone.
 
 `DELETE http://manage.rpzdb.com/api/v1/zones/:id`
 
-### REQUIRED ARGUMENTS
+### URL PARAMETER
 
 Parameter | Description
 --------- | -----------
 id | The ID of the zone to delete
+
+### RESPONSE PARAMETER
+
+Parameter | Description
+--------- | -----------
+id | The ID of the deleted zone
+zone_name | Deleted zone name
+status | Deleted status
