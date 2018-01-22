@@ -305,7 +305,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </thead><tbody>
 <tr>
 <td>id</td>
-<td>The ID of the node to retrieve</td>
+<td>The ID of the zone to retrieve</td>
 </tr>
 </tbody></table>
 
@@ -317,8 +317,9 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
      --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
      --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
      --data-binary <span class="s2">"{
-    </span><span class="se">\"</span><span class="s2">zone_name</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">labs.com.my</span><span class="se">\"</span><span class="s2">,
-    </span><span class="se">\"</span><span class="s2">description</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">this is new domain</span><span class="se">\"</span><span class="s2">
+  </span><span class="se">\"</span><span class="s2">zone_name</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">blackhole</span><span class="se">\"</span><span class="s2">,
+  </span><span class="se">\"</span><span class="s2">site_ip</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">192.168.3.1</span><span class="se">\"</span><span class="s2">,
+  </span><span class="se">\"</span><span class="s2">server</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">ap-southeast.rpzdb.com</span><span class="se">\"</span><span class="s2">
 }"</span> <span class="se">\</span>
 <span class="s1">'http://manage.rpzdb.com/api/v1/zones'</span>
 </code></pre>
@@ -355,6 +356,20 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">POST http://manage.rpzdb.com/api/v1/zones</code></p>
+
+<h3 id="required-arguments">REQUIRED ARGUMENTS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The ID of the zone to retrieve</td>
+</tr>
+</tbody></table>
 
 <h2 id="show-zone">Show Zone</h2>
 
@@ -397,6 +412,20 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <p><code class="prettyprint">PUT http://manage.rpzdb.com/api/v1/zones/:id</code></p>
 
+<h3 id="required-arguments">REQUIRED ARGUMENTS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The ID of the zone to show</td>
+</tr>
+</tbody></table>
+
 <h2 id="delete-zone">Delete Zone</h2>
 
 <p>You may delete a zone using this action.</p>
@@ -418,6 +447,20 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <h3 id="http-request">HTTP Request</h3>
 
 <p><code class="prettyprint">DELETE http://manage.rpzdb.com/api/v1/zones/:id</code></p>
+
+<h3 id="required-arguments">REQUIRED ARGUMENTS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The ID of the zone to delete</td>
+</tr>
+</tbody></table>
 
           <h1 id="hosts">Hosts</h1>
 
