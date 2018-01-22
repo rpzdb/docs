@@ -6,7 +6,7 @@
 ```shell
 curl --include \
      --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
-  'http://www.dnsvault.net/api/v1/hosts'
+  'http://manage.rpzdb.com/api/v1/hosts'
 ```
 
 > The above command returns JSON structured like this:
@@ -32,7 +32,7 @@ This endpoint retrieves all hosts.
 
 ### HTTP Request
 
-`GET http://www.dnsvault.net/api/v1/hosts`
+`GET http://manage.rpzdb.com/api/v1/hosts`
 
 
 
@@ -42,7 +42,7 @@ This endpoint retrieves all hosts.
 ```shell
 curl --include \
      --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
-  'http://www.dnsvault.net/api/v1/hosts/2'
+  'http://manage.rpzdb.com/api/v1/hosts/2'
 ```
 
 
@@ -65,7 +65,7 @@ This endpoint retrieves a node.
 
 ### HTTP Request
 
-`GET http://www.dnsvault.net/api/v1/hosts/:id`
+`GET http://manage.rpzdb.com/api/v1/hosts/:id`
 
 ### URL Parameters
 
@@ -78,7 +78,7 @@ ID | The ID of the node to retrieve
 curl --include \
      --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
      --request DELETE \
-  'http://www.dnsvault.net/api/v1/hosts/2'
+  'http://manage.rpzdb.com/api/v1/hosts/2'
 ```
 
 
@@ -97,7 +97,7 @@ This endpoint delete a node.
 
 ### HTTP Request
 
-`DELETE http://www.dnsvault.net/api/v1/hosts/:id`
+`DELETE http://manage.rpzdb.com/api/v1/hosts/:id`
 
 ### URL Parameters
 

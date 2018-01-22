@@ -7,7 +7,7 @@ You may list collection of zone using this action.
 ```shell
 curl --include \
      --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
-  'http://www.dnsvault.net/api/v1/nodes/2/dns/views/51/zones/1/records'
+  'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/51/zones/1/records'
 ```
 
 
@@ -90,7 +90,7 @@ This endpoint show all records.
 
 ### HTTP Request
 
-`GET http://www.dnsvault.net/views/:view_id/zones/:zone_id/records`
+`GET http://manage.rpzdb.com/views/:view_id/zones/:zone_id/records`
 
 ## Show Record
 
@@ -109,7 +109,7 @@ curl --include \
         { \"ttl\":\"7200\", \"type\":\"MX\", \"data\":\"10 mail.server01.com.\"}
     ]
 }" \
-'http://www.dnsvault.net/api/v1/nodes/2/dns/views/51/zones/1/records'
+'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/51/zones/1/records'
 ```
 
 
@@ -163,7 +163,7 @@ This endpoint create multiple records.
 
 ### HTTP Request
 
-`POST http://www.dnsvault.net/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id/records`
+`POST http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id/records`
 
 ## Create Record
 
@@ -183,7 +183,7 @@ curl --include \
                 \"data\": \"2.2.2.2\"
             }
 }" \
-'http://www.dnsvault.net/api/v1/nodes/2/dns/views/51/zones/1/record'
+'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/51/zones/1/record'
 ```
 
 
@@ -213,7 +213,7 @@ This endpoint create a record.
 
 ### HTTP Request
 
-`POST http://www.dnsvault.net/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id/record`
+`POST http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id/record`
 
 
 ## Delete Records
@@ -232,7 +232,7 @@ curl --include \
         { \"ttl\":\"7200\", \"type\":\"MX\", \"data\":\"10 mail.server01.com.\"}
     ]
 }" \
-'http://www.dnsvault.net/api/v1/nodes/2/dns/views/51/zones/1/records'
+'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/51/zones/1/records'
 ```
 
 
@@ -274,4 +274,4 @@ This endpoint create a record.
 
 ### HTTP Request
 
-`DELETE http://www.dnsvault.net/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id/records`
+`DELETE http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id/records`
