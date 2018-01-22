@@ -259,7 +259,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h2 id="list-all-rpz-zones">List all RPZ Zones</h2>
 
-<p>You may list collection of zones using this action.</p>
+<p>You may list collection of rpz zones using this action.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
      --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
@@ -289,7 +289,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint get list of zones.</p>
+<p>This endpoint get list of  rpz zones.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -297,7 +297,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h2 id="create-rpz-zone">Create RPZ Zone</h2>
 
-<p>You may create a zone using this action. It takes a JSON object containing a parameters.</p>
+<p>You may create a rpz zone using this action. It takes a JSON object containing a parameters.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --request POST <span class="se">\</span>
      --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
@@ -305,7 +305,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
      --data-binary <span class="s2">"{
   </span><span class="se">\"</span><span class="s2">zone_name</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">blackhole</span><span class="se">\"</span><span class="s2">,
   </span><span class="se">\"</span><span class="s2">site_ip</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">192.168.3.1</span><span class="se">\"</span><span class="s2">,
-  </span><span class="se">\"</span><span class="s2">server</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">ap-southeast.rpzdb.com</span><span class="se">\"</span><span class="s2">
+  </span><span class="se">\"</span><span class="s2">feed_server</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">ap-southeast.rpzdb.com</span><span class="se">\"</span><span class="s2">
 }"</span> <span class="se">\</span>
 <span class="s1">'http://manage.rpzdb.com/api/v1/zones'</span>
 </code></pre>
@@ -337,7 +337,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint create a zone.</p>
+<p>This endpoint create a rpz zone.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -352,7 +352,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 </thead><tbody>
 <tr>
-<td>id</td>
+<td>zone_name</td>
 <td>The ID of the zone to retrieve</td>
 </tr>
 <tr>
@@ -360,7 +360,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <td>DNS server ip destination</td>
 </tr>
 <tr>
-<td>server</td>
+<td>feed_server</td>
 <td>Blacklist provider server address</td>
 </tr>
 </tbody></table>
@@ -657,7 +657,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
     </span><span class="se">\"</span><span class="s2">destination</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">1.1.1.1</span><span class="se">\"</span><span class="s2">,
     </span><span class="se">\"</span><span class="s2">user_tag_list</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">danger,underated</span><span class="se">\"</span><span class="s2">
 }"</span> <span class="se">\</span>
-<span class="s1">'http://manage.rpzdb.com/api/v1/zones/36'</span>
+<span class="s1">'http://manage.rpzdb.com/api/v1/zones/36/hosts'</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -679,7 +679,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://manage.rpzdb.com/api/v1/zones</code></p>
+<p><code class="prettyprint">POST http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts</code></p>
 
 <h3 id="url-parameter">URL PARAMETER</h3>
 
@@ -689,10 +689,6 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <th>Description</th>
 </tr>
 </thead><tbody>
-<tr>
-<td>id</td>
-<td>The ID of the host to delete</td>
-</tr>
 <tr>
 <td>blacklist_data</td>
 <td>Blacklist data</td>
