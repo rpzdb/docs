@@ -369,6 +369,52 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <td>id</td>
 <td>The ID of the zone to retrieve</td>
 </tr>
+<tr>
+<td>site_ip</td>
+<td>DNS server ip destination</td>
+</tr>
+<tr>
+<td>server</td>
+<td>Blacklist provider server address</td>
+</tr>
+</tbody></table>
+
+<h3 id="response-parameter">RESPONSE PARAMETER</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The ID of the selected zone</td>
+</tr>
+<tr>
+<td>zone_name</td>
+<td>Selected zone name</td>
+</tr>
+<tr>
+<td>combine</td>
+<td></td>
+</tr>
+<tr>
+<td>server_name</td>
+<td></td>
+</tr>
+<tr>
+<td>server_ip</td>
+<td></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td></td>
+</tr>
 </tbody></table>
 
 <h2 id="show-zone">Show Zone</h2>
@@ -412,7 +458,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <p><code class="prettyprint">PUT http://manage.rpzdb.com/api/v1/zones/:id</code></p>
 
-<h3 id="required-arguments">REQUIRED ARGUMENTS</h3>
+<h3 id="url-parameter">URL PARAMETER</h3>
 
 <table><thead>
 <tr>
@@ -423,6 +469,44 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <tr>
 <td>id</td>
 <td>The ID of the zone to show</td>
+</tr>
+</tbody></table>
+
+<h3 id="response-parameter">RESPONSE PARAMETER</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The ID of the selected zone</td>
+</tr>
+<tr>
+<td>zone_name</td>
+<td>Selected zone name</td>
+</tr>
+<tr>
+<td>combine</td>
+<td></td>
+</tr>
+<tr>
+<td>server_name</td>
+<td></td>
+</tr>
+<tr>
+<td>server_ip</td>
+<td></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td></td>
 </tr>
 </tbody></table>
 
@@ -448,7 +532,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <p><code class="prettyprint">DELETE http://manage.rpzdb.com/api/v1/zones/:id</code></p>
 
-<h3 id="required-arguments">REQUIRED ARGUMENTS</h3>
+<h3 id="url-parameter">URL PARAMETER</h3>
 
 <table><thead>
 <tr>
@@ -459,6 +543,28 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <tr>
 <td>id</td>
 <td>The ID of the zone to delete</td>
+</tr>
+</tbody></table>
+
+<h3 id="response-parameter">RESPONSE PARAMETER</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The ID of the deleted zone</td>
+</tr>
+<tr>
+<td>zone_name</td>
+<td>Deleted zone name</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Deleted status</td>
 </tr>
 </tbody></table>
 
