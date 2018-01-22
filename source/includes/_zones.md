@@ -45,7 +45,7 @@ This endpoint get list of zones.
 
 Parameter | Description
 --------- | -----------
-id | The ID of the node to retrieve
+id | The ID of the zone to retrieve
 
 
 ## Create Zone
@@ -58,8 +58,9 @@ curl --include \
      --header "Content-Type: application/json" \
      --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
      --data-binary "{
-    \"zone_name\": \"labs.com.my\",
-    \"description\": \"this is new domain\"
+  \"zone_name\": \"blackhole\",
+  \"site_ip\": \"192.168.3.1\",
+  \"server\": \"ap-southeast.rpzdb.com\"
 }" \
 'http://manage.rpzdb.com/api/v1/zones'
 ```
@@ -98,6 +99,15 @@ This endpoint create a zone.
 ### HTTP Request
 
 `POST http://manage.rpzdb.com/api/v1/zones`
+
+### REQUIRED ARGUMENTS
+
+Parameter | Description
+--------- | -----------
+id | The ID of the zone to retrieve
+
+
+
 
 ## Show Zone
 
@@ -145,6 +155,12 @@ This endpoint get list of zones.
 
 `PUT http://manage.rpzdb.com/api/v1/zones/:id`
 
+### REQUIRED ARGUMENTS
+
+Parameter | Description
+--------- | -----------
+id | The ID of the zone to show
+
 ## Delete Zone
 
 You may delete a zone using this action.
@@ -172,3 +188,9 @@ This endpoint delete a zone.
 ### HTTP Request
 
 `DELETE http://manage.rpzdb.com/api/v1/zones/:id`
+
+### REQUIRED ARGUMENTS
+
+Parameter | Description
+--------- | -----------
+id | The ID of the zone to delete
