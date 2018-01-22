@@ -397,23 +397,47 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 <tr>
 <td>combine</td>
-<td></td>
+<td>Combined of zone name</td>
 </tr>
 <tr>
 <td>server_name</td>
-<td></td>
+<td>Server name</td>
 </tr>
 <tr>
 <td>server_ip</td>
-<td></td>
+<td>Server ip address</td>
 </tr>
 <tr>
 <td>created_at</td>
-<td></td>
+<td>Date and time created</td>
 </tr>
 <tr>
 <td>updated_at</td>
-<td></td>
+<td>Date and time updated</td>
+</tr>
+<tr>
+<td>tsig[id]</td>
+<td>Transaction signature id</td>
+</tr>
+<tr>
+<td>tsig[keyname]</td>
+<td>Transaction signature keyname</td>
+</tr>
+<tr>
+<td>tsig[algorithm]</td>
+<td>Transaction signature algorithm</td>
+</tr>
+<tr>
+<td>tsig[algorithm_size]</td>
+<td>Transaction signature size</td>
+</tr>
+<tr>
+<td>tsig[secret]</td>
+<td>Transaction signature secret</td>
+</tr>
+<tr>
+<td>statement[]</td>
+<td>Contains notify statement</td>
 </tr>
 </tbody></table>
 
@@ -474,41 +498,19 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="response-parameter">RESPONSE PARAMETER</h3>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id</td>
-<td>The ID of the selected zone</td>
-</tr>
-<tr>
-<td>zone_name</td>
-<td>Selected zone name</td>
-</tr>
-<tr>
-<td>combine</td>
-<td></td>
-</tr>
-<tr>
-<td>server_name</td>
-<td></td>
-</tr>
-<tr>
-<td>server_ip</td>
-<td></td>
-</tr>
-<tr>
-<td>created_at</td>
-<td></td>
-</tr>
-<tr>
-<td>updated_at</td>
-<td></td>
-</tr>
-</tbody></table>
+<p>id | The ID of the selected zone
+zone_name | Selected zone name
+combine | Combined of zone name
+server_name | Server name
+server_ip | Server ip address
+created_at | Date and time created
+updated_at |  Date and time updated
+tsig[id] | Transaction signature id
+tsig[keyname] | Transaction signature keyname
+tsig[algorithm] | Transaction signature algorithm
+tsig[algorithm_size] | Transaction signature size
+tsig[secret] | Transaction signature secret
+statement[] | Contains notify statement</p>
 
 <h2 id="delete-zone">Delete Zone</h2>
 
