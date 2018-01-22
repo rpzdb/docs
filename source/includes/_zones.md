@@ -98,7 +98,7 @@ This endpoint create a rpz zone.
 
 Parameter | Description
 --------- | -----------
-zone_name | The ID of the zone to retrieve
+zone_name | Rpz zone name
 site_ip | DNS server ip destination
 feed_server | Blacklist provider server address
 
