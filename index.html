@@ -255,9 +255,9 @@ curl <span class="s2">"rpzdb.com"</span>
 You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API key.
 </aside>
 
-          <h1 id="zones">Zones</h1>
+          <h1 id="rpz-zones">RPZ Zones</h1>
 
-<h2 id="list-all-zones">List all Zones</h2>
+<h2 id="list-all-rpz-zones">List all RPZ Zones</h2>
 
 <p>You may list collection of zones using this action.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
@@ -295,7 +295,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/zones</code></p>
 
-<h2 id="create-zone">Create Zone</h2>
+<h2 id="create-rpz-zone">Create RPZ Zone</h2>
 
 <p>You may create a zone using this action. It takes a JSON object containing a parameters.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
@@ -427,7 +427,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 </tbody></table>
 
-<h2 id="show-zone">Show Zone</h2>
+<h2 id="show-rpz-zone">Show RPZ Zone</h2>
 
 <p>You may list a zone using this action.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
@@ -544,7 +544,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 </tbody></table>
 
-<h2 id="delete-zone">Delete Zone</h2>
+<h2 id="delete-rpz-zone">Delete RPZ Zone</h2>
 
 <p>You may delete a zone using this action.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
@@ -602,9 +602,9 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 </tbody></table>
 
-          <h1 id="hosts">Hosts</h1>
+          <h1 id="blacklist">Blacklist</h1>
 
-<h2 id="list-all-hosts">List All Hosts</h2>
+<h2 id="list-all-blacklist">List All Blacklist</h2>
 
 <p>You may list collection of hosts using this action.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
@@ -644,7 +644,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts</code></p>
 
-<h2 id="create-zone">Create Zone</h2>
+<h2 id="create-blacklist">Create Blacklist</h2>
 
 <p>You may create a host using this action. It takes a JSON object containing a parameters.</p>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
@@ -749,7 +749,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 </tbody></table>
 
-<h2 id="show-host">Show Host</h2>
+<h2 id="show-blacklist">Show Blacklist</h2>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
   <span class="s1">'http://manage.rpzdb.com/api/v1/zones/36/hosts/359'</span>
@@ -829,7 +829,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 </tbody></table>
 
-<h2 id="delete-host">Delete Host</h2>
+<h2 id="delete-blacklist">Delete Blacklist</h2>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
      --request DELETE <span class="se">\</span>
