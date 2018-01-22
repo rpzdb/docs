@@ -41,12 +41,6 @@ This endpoint get list of zones.
 
 `GET http://manage.rpzdb.com/api/v1/zones`
 
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-id | The ID of the zone to retrieve
-
 
 ## Create Zone
 
