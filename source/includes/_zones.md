@@ -6,7 +6,7 @@ You may list collection of zones using this action.
 ```shell
 curl --include \
      --header "Content-Type: application/json" \
-     --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
+     --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
   'http://manage.rpzdb.com/api/v1/zones'
 ```
 
@@ -82,7 +82,7 @@ You may create a zone using this action. It takes a JSON object containing a par
 curl --include \
      --request POST \
      --header "Content-Type: application/json" \
-     --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
+     --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
      --data-binary "{
     \"zone_name\": \"labs.com.my\",
     \"description\": \"this is new domain\"
@@ -125,7 +125,7 @@ You may list a zone using this action.
 
 ```shell
 curl --include \
-     --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
+     --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
   'http://manage.rpzdb.com/api/v1/zones/91'
 ```
 
@@ -182,7 +182,7 @@ You may delete a zone using this action.
 curl --include \
      --request DELETE \
      --header "Content-Type: application/json" \
-     --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
+     --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
   'http://manage.rpzdb.com/api/v1/zones/91'
 ```
 

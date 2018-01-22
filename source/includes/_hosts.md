@@ -5,7 +5,7 @@
 
 ```shell
 curl --include \
-     --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
+     --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
   'http://manage.rpzdb.com/api/v1/hosts'
 ```
 
@@ -41,7 +41,7 @@ This endpoint retrieves all hosts.
 
 ```shell
 curl --include \
-     --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
+     --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
   'http://manage.rpzdb.com/api/v1/hosts/2'
 ```
 
@@ -76,7 +76,7 @@ ID | The ID of the node to retrieve
 ## Delete a Host
 ```shell
 curl --include \
-     --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
+     --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
      --request DELETE \
   'http://manage.rpzdb.com/api/v1/hosts/2'
 ```
