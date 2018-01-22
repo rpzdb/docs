@@ -7,7 +7,7 @@ You may list collection of zones using this action.
 curl --include \
      --header "Content-Type: application/json" \
      --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
-  'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones'
+  'http://manage.rpzdb.com/api/v1/zones'
 ```
 
 > The above command returns JSON structured like this:
@@ -58,21 +58,6 @@ curl --include \
         "serial_number": null,
         "created_at": "2017-07-03T03:04:49.595Z",
         "updated_at": "2017-07-03T03:04:49.688Z"
-    },
-    {
-        "id": 82,
-        "zone_name": "meee.my",
-        "view_id": 50,
-        "description": "",
-        "zone_type": "master",
-        "status": "active",
-        "processing_status": false,
-        "backend_status": false,
-        "delete_status": false,
-        "position": 4,
-        "serial_number": null,
-        "created_at": "2017-07-03T03:06:42.428Z",
-        "updated_at": "2017-07-03T03:06:42.428Z"
     }
 ]
 ```
@@ -81,7 +66,7 @@ This endpoint get list of zones.
 
 ### HTTP Request
 
-`GET http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones`
+`GET http://manage.rpzdb.com/api/v1/zones`
 
 ### URL Parameters
 
@@ -102,7 +87,7 @@ curl --include \
     \"zone_name\": \"labs.com.my\",
     \"description\": \"this is new domain\"
 }" \
-'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones'
+'http://manage.rpzdb.com/api/v1/zones'
 ```
 
 > The above command returns JSON structured like this:
@@ -132,7 +117,7 @@ This endpoint create a zone.
 
 ### HTTP Request
 
-`POST http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones`
+`POST http://manage.rpzdb.com/api/v1/zones`
 
 ## Show Zone
 
@@ -141,7 +126,7 @@ You may list a zone using this action.
 ```shell
 curl --include \
      --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
-  'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones/91'
+  'http://manage.rpzdb.com/api/v1/zones/91'
 ```
 
 > The above command returns JSON structured like this:
@@ -187,7 +172,7 @@ This endpoint get list of zones.
 
 ### HTTP Request
 
-`PUT http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones/update_status`
+`PUT http://manage.rpzdb.com/api/v1/zones/:id`
 
 ## Delete Zone
 
@@ -198,7 +183,7 @@ curl --include \
      --request DELETE \
      --header "Content-Type: application/json" \
      --header "Authorization: Token iwwTXK54aahsosrx5JK7hkTe" \
-  'http://manage.rpzdb.com/api/v1/nodes/2/dns/views/50/zones/91'
+  'http://manage.rpzdb.com/api/v1/zones/91'
 ```
 
  The above command returns JSON structured like this:
@@ -217,4 +202,4 @@ This endpoint delete a zone.
 
 ### HTTP Request
 
-`DELETE http://manage.rpzdb.com/api/v1/nodes/:node_id/dns/views/:view_id/zones/:id`
+`DELETE http://manage.rpzdb.com/api/v1/zones/:id`
