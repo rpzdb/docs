@@ -334,7 +334,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </thead><tbody>
 <tr>
 <td>page</td>
-<td>Up to 15 results will be returned in a single API call per specified page. Default to 1 if not present.</td>
+<td>Up to 20 results will be returned in a single API call per specified page. Default to 1 if not present.</td>
 </tr>
 </tbody></table>
 
@@ -695,7 +695,35 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts</code></p>
+<p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts</code></p>
+
+<h3 id="required-arguments">REQUIRED ARGUMENTS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>zone_name</td>
+<td>Rpz zone name</td>
+</tr>
+</tbody></table>
+
+<h3 id="optional-arguments">OPTIONAL ARGUMENTS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>page</td>
+<td>Up to 20 results will be returned in a single API call per specified page. Default to 1 if not present.</td>
+</tr>
+</tbody></table>
 
 <h2 id="create-blacklist">Create Blacklist</h2>
 
@@ -732,7 +760,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts</code></p>
+<p><code class="prettyprint">POST http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts</code></p>
 
 <h3 id="url-parameter">URL PARAMETER</h3>
 
@@ -850,7 +878,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts/:id</code></p>
+<p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts/:id</code></p>
 
 <h3 id="url-parameter">URL PARAMETER</h3>
 
@@ -928,7 +956,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">DELETE http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts/:id</code></p>
+<p><code class="prettyprint">DELETE http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts/:id</code></p>
 
 <h3 id="url-parameter">URL PARAMETER</h3>
 
