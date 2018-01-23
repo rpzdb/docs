@@ -88,7 +88,7 @@ curl --include \
      --header "Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe" \
      --data-binary "{
   \"zone_name\": \"blackhole\",
-  \"site_ip\": \"192.168.3.1\",
+  \"site_ip\": [\"192.168.3.1\"],
   \"feed_server\": \"ap-southeast.rpzdb.com\"
 }" \
 'http://manage.rpzdb.com/api/v1/zones'
@@ -134,7 +134,7 @@ This endpoint create a rpz zone.
 Parameter | Description
 --------- | -----------
 zone_name | Rpz zone name
-site_ip | DNS server ip destination
+site_ip | DNS server ip destination(Must be in array)
 
 
 ### OPTIONAL ARGUMENTS
