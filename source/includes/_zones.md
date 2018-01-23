@@ -166,7 +166,7 @@ This endpoint get list of zones.
 
 ### HTTP Request
 
-`PUT http://manage.rpzdb.com/api/v1/zones/:id`
+`GET http://manage.rpzdb.com/api/v1/zones/:id`
 
 ### URL PARAMETER
 
