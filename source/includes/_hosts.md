@@ -42,7 +42,21 @@ This endpoint retrieves all hosts.
 
 ### HTTP Request
 
-`GET http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts`
+`GET http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts`
+
+### REQUIRED ARGUMENTS
+
+Parameter | Description
+--------- | -----------
+zone_name | Rpz zone name
+
+
+### OPTIONAL ARGUMENTS
+
+Parameter | Description
+--------- | -----------
+page | Up to 20 results will be returned in a single API call per specified page. Default to 1 if not present.
+
 
 ## Create Blacklist
 
@@ -83,7 +97,7 @@ This endpoint create a zone.
 
 ### HTTP Request
 
-`POST http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts`
+`POST http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts`
 
 ### URL PARAMETER
 
@@ -113,8 +127,8 @@ Value | Description
 3 | NXDOMAIN
 4 | NODATA
 
-## Show Blacklist
 
+## Show Blacklist
 
 ```shell
 curl --include \
@@ -145,7 +159,7 @@ This endpoint retrieves a host.
 
 ### HTTP Request
 
-`GET http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts/:id`
+`GET http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts/:id`
 
 ### URL PARAMETER
 
@@ -163,6 +177,7 @@ content | Record data
 tags | Tagging associate with the host
 created_at | Date and time created
 updated_at |  Date and time updated
+
 
 ## Delete Blacklist
 ```shell
@@ -193,7 +208,7 @@ This endpoint delete a host.
 
 ### HTTP Request
 
-`DELETE http://manage.rpzdb.com/api/v1/zones/:zone_id/hosts/:id`
+`DELETE http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts/:id`
 
 ### URL PARAMETER
 

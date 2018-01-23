@@ -74,7 +74,7 @@ This endpoint get list of  rpz zones.
 
 Parameter | Description
 --------- | -----------
-page | Up to 15 results will be returned in a single API call per specified page. Default to 1 if not present.
+page | Up to 20 results will be returned in a single API call per specified page. Default to 1 if not present.
 
 
 ## Create RPZ Zone
