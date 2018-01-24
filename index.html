@@ -914,7 +914,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </thead><tbody>
 <tr>
 <td>zone_name</td>
-<td>Zone Name</td>
+<td>Rpz Zone Name</td>
 </tr>
 <tr>
 <td>id</td>
@@ -996,7 +996,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </thead><tbody>
 <tr>
 <td>zone_name</td>
-<td>Zone Name</td>
+<td>Rpz Zone Name</td>
 </tr>
 <tr>
 <td>id</td>
@@ -1043,6 +1043,69 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <tr>
 <td>message</td>
 <td>Message from server</td>
+</tr>
+</tbody></table>
+
+          <h1 id="search">Search</h1>
+
+<h2 id="search-rpz-zone-or-blacklist">Search Rpz Zone or Blacklist</h2>
+
+<p>You may search rpz zone or blacklist using this action. It takes a JSON object containing a parameters.</p>
+<pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
+     --request POST <span class="se">\</span>
+     --header <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+     --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
+     --data-binary <span class="s2">"{
+    </span><span class="se">\"</span><span class="s2">keyword</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">amir</span><span class="se">\"</span><span class="s2">,
+    </span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">zone</span><span class="se">\"</span><span class="s2">
+}"</span> <span class="se">\</span>
+<span class="s1">'http://manage.rpzdb.com/api/v1/zones/36/hosts'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">66</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"zone_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amirtest1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"combine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amirtest1.ap-southeast.rpzdb.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"server_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ap-southeast.rpzdb.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"server_ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"175.41.131.248"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-22T23:07:03Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-22T23:07:03Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"zone_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amirtest2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"combine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amirtest2.ap-southeast.rpzdb.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"server_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ap-southeast.rpzdb.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"server_ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"175.41.131.248"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-22T23:17:35Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-22T23:17:35Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint create a zone.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts</code></p>
+
+<h3 id="required-arguments">REQUIRED ARGUMENTS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>keyword</td>
+<td>Keyword used for search</td>
+</tr>
+<tr>
+<td>type</td>
+<td>zone or host</td>
 </tr>
 </tbody></table>
 
