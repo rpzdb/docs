@@ -13,7 +13,7 @@ curl --include \
     \"keyword\": \"amir\",
     \"type\": \"zone\"
 }" \
-'http://manage.rpzdb.com/api/v1/zones/36/hosts'
+'http://manage.rpzdb.com/api/v1/search'
 ```
 
 > The above command returns JSON structured like this:
