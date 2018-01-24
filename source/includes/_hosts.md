@@ -44,7 +44,7 @@ This endpoint retrieves all hosts.
 
 `GET http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts`
 
-### REQUIRED ARGUMENTS
+### URL PARAMETER
 
 Parameter | Description
 --------- | -----------
@@ -103,10 +103,32 @@ This endpoint create a zone.
 
 Parameter | Description
 --------- | -----------
+zone_name | Rpz zone name
+
+### REQUIRED ARGUMENTS
+
+Parameter | Description
+--------- | -----------
 blacklist_data | Blacklist data
-record_type | Record Type
 destination | Destination
 user_tag_list | Tagging associate with the host
+
+### OPTIONAL ARGUMENTS
+
+Parameter | Description
+--------- | -----------
+record_type | Record Type
+
+### Record Type
+
+Value | Description
+--------- | -----------
+1 | A or AAAA
+2 | CNAME
+3 | NXDOMAIN
+4 | NODATA
+
+
 ### RESPONSE PARAMETER
 Parameter | Description
 --------- | -----------
@@ -117,15 +139,6 @@ content | Record data
 tags | Tagging associate with the host
 created_at | Date and time created
 updated_at |  Date and time updated
-
-### Record Type
-
-Value | Description
---------- | -----------
-1 | A or AAAA
-2 | CNAME
-3 | NXDOMAIN
-4 | NODATA
 
 
 ## Show Blacklist
@@ -165,7 +178,8 @@ This endpoint retrieves a host.
 
 Parameter | Description
 --------- | -----------
-id | The ID of the host to retrieve
+zone_name | Zone Name
+id | The ID or Host name to retrieve
 
 ### RESPONSE PARAMETER
 Parameter | Description
@@ -214,7 +228,8 @@ This endpoint delete a host.
 
 Parameter | Description
 --------- | -----------
-id | The ID of the host to delete
+zone_name | Zone Name
+id | The ID or Host name to delete
 
 ### RESPONSE PARAMETER
 Parameter | Description
