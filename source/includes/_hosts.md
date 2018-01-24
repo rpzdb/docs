@@ -178,7 +178,7 @@ This endpoint retrieves a host.
 
 Parameter | Description
 --------- | -----------
-zone_name | Zone Name
+zone_name | Rpz Zone Name
 id | The ID or Host name to retrieve
 
 ### RESPONSE PARAMETER
@@ -228,7 +228,7 @@ This endpoint delete a host.
 
 Parameter | Description
 --------- | -----------
-zone_name | Zone Name
+zone_name | Rpz Zone Name
 id | The ID or Host name to delete
 
 ### RESPONSE PARAMETER

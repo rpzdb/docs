@@ -11,6 +11,7 @@ toc_footers:
 includes:
   - zones
   - hosts
+  - search
 
 search: true
 ---
