@@ -13,29 +13,34 @@ curl --include \
 > The above command returns JSON structured like this:
 
 ```json
-[
-    {
-        "id": 344,
-        "blacklist_data": "lalalax.com",
-        "created_at": "2018-01-22T08:59:51Z",
-        "updated_at": "2018-01-22T11:06:12Z",
-        "record_type": "A",
-        "content": "2.2.2.2",
-        "tags": [
-            "yolo",
-            "hello"
-        ]
-    },
-    {
-        "id": 346,
-        "blacklist_data": "pp.my",
-        "created_at": "2018-01-22T09:25:55Z",
-        "updated_at": "2018-01-22T09:25:55Z",
-        "record_type": "A",
-        "content": "1.3.4.5",
-        "tags": []
-    }
-]
+{
+
+    "hosts": [
+        {
+            "id": 344,
+            "blacklist_data": "lalalax.com",
+            "created_at": "2018-01-22T08:59:51Z",
+            "updated_at": "2018-01-22T11:06:12Z",
+            "record_type": "A",
+            "content": "2.2.2.2",
+            "tags": [
+                "yolo",
+                "hello"
+            ]
+        },
+        {
+            "id": 346,
+            "blacklist_data": "pp.my",
+            "created_at": "2018-01-22T09:25:55Z",
+            "updated_at": "2018-01-22T09:25:55Z",
+            "record_type": "A",
+            "content": "1.3.4.5",
+            "tags": []
+        }
+    ]
+    "pages": 1
+
+}
 ```
 
 This endpoint retrieves all hosts.

@@ -13,55 +13,59 @@ curl --include \
 > The above command returns JSON structured like this:
 
 ```json
-[
+{
+
+    "zones": [
     {
-        "id": 3,
-        "zone_name": "labs",
-        "combine": "labs.us-east.rpzdb.com",
-        "server_name": "us-east.rpzdb.com",
-        "server_ip": "54.225.70.69",
-        "created_at": "2013-04-05T19:29:22Z",
-        "updated_at": "2013-04-05T19:29:22Z",
-        "statements": [
-            {
-                "id": 12,
-                "statement": "also-notify",
-                "address": "8.8.8.8",
-                "port": 53
-            },
-            {
-                "id": 13,
-                "statement": "also-notify",
-                "address": "4.4.4.4",
-                "port": 53
-            }
-        ]
-    },
-    {
-        "id": 82,
-        "zone_name": "blackhole",
-        "combine": "blackhole.ap-southeast.rpzdb.com",
-        "server_name": "ap-southeast.rpzdb.com",
-        "server_ip": "175.41.131.248",
-        "created_at": "2018-01-23T04:06:02Z",
-        "updated_at": "2018-01-23T04:06:02Z",
-        "tsig": {
-            "id": 32,
-            "keyname": "blackhole",
-            "algorithm": "HMAC-SHA1",
-            "algorithm_size": "128",
-            "secret": "mtIsHR3rqQKx1EfkQNIQIA=="
+            "id": 3,
+            "zone_name": "labs",
+            "combine": "labs.us-east.rpzdb.com",
+            "server_name": "us-east.rpzdb.com",
+            "server_ip": "54.225.70.69",
+            "created_at": "2013-04-05T19:29:22Z",
+            "updated_at": "2013-04-05T19:29:22Z",
+            "statements": [
+                {
+                    "id": 12,
+                    "statement": "also-notify",
+                    "address": "8.8.8.8",
+                    "port": 53
+                },
+                {
+                    "id": 13,
+                    "statement": "also-notify",
+                    "address": "4.4.4.4",
+                    "port": 53
+                }
+            ]
         },
-        "statements": [
-            {
-                "id": 43,
-                "statement": "also-notify",
-                "address": "192.168.3.1",
-                "port": 53
-            }
-        ]
-    }
-]
+        {
+            "id": 82,
+            "zone_name": "blackhole",
+            "combine": "blackhole.ap-southeast.rpzdb.com",
+            "server_name": "ap-southeast.rpzdb.com",
+            "server_ip": "175.41.131.248",
+            "created_at": "2018-01-23T04:06:02Z",
+            "updated_at": "2018-01-23T04:06:02Z",
+            "tsig": {
+                "id": 32,
+                "keyname": "blackhole",
+                "algorithm": "HMAC-SHA1",
+                "algorithm_size": "128",
+                "secret": "mtIsHR3rqQKx1EfkQNIQIA=="
+            },
+            "statements": [
+                {
+                    "id": 43,
+                    "statement": "also-notify",
+                    "address": "192.168.3.1",
+                    "port": 53
+                }
+            ]
+        }
+    ]
+    "pages": 1
+}
 ```
 
 This endpoint get list of  rpz zones.
