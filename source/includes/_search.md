@@ -45,7 +45,7 @@ This endpoint create a zone.
 
 ### HTTP Request
 
-`POST http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts`
+`POST http://manage.rpzdb.com/api/v1/search`
 
 ### REQUIRED ARGUMENTS
 
