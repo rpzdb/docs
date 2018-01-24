@@ -697,7 +697,7 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 
 <p><code class="prettyprint">GET http://manage.rpzdb.com/api/v1/zones/:zone_name/hosts</code></p>
 
-<h3 id="required-arguments">REQUIRED ARGUMENTS</h3>
+<h3 id="url-parameter">URL PARAMETER</h3>
 
 <table><thead>
 <tr>
@@ -771,12 +771,22 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 </thead><tbody>
 <tr>
+<td>zone_name</td>
+<td>Rpz zone name</td>
+</tr>
+</tbody></table>
+
+<h3 id="required-arguments">REQUIRED ARGUMENTS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
 <td>blacklist_data</td>
 <td>Blacklist data</td>
-</tr>
-<tr>
-<td>record_type</td>
-<td>Record Type</td>
 </tr>
 <tr>
 <td>destination</td>
@@ -785,6 +795,46 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 <tr>
 <td>user_tag_list</td>
 <td>Tagging associate with the host</td>
+</tr>
+</tbody></table>
+
+<h3 id="optional-arguments">OPTIONAL ARGUMENTS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>record_type</td>
+<td>Record Type</td>
+</tr>
+</tbody></table>
+
+<h3 id="record-type">Record Type</h3>
+
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>A or AAAA</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CNAME</td>
+</tr>
+<tr>
+<td>3</td>
+<td>NXDOMAIN</td>
+</tr>
+<tr>
+<td>4</td>
+<td>NODATA</td>
 </tr>
 </tbody></table>
 
@@ -826,32 +876,6 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 </tbody></table>
 
-<h3 id="record-type">Record Type</h3>
-
-<table><thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>1</td>
-<td>A or AAAA</td>
-</tr>
-<tr>
-<td>2</td>
-<td>CNAME</td>
-</tr>
-<tr>
-<td>3</td>
-<td>NXDOMAIN</td>
-</tr>
-<tr>
-<td>4</td>
-<td>NODATA</td>
-</tr>
-</tbody></table>
-
 <h2 id="show-blacklist">Show Blacklist</h2>
 <pre class="highlight shell tab-shell"><code>curl --include <span class="se">\</span>
      --header <span class="s2">"Authorization: Token token=iwwTXK54aahsosrx5JK7hkTe"</span> <span class="se">\</span>
@@ -889,8 +913,12 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 </thead><tbody>
 <tr>
+<td>zone_name</td>
+<td>Zone Name</td>
+</tr>
+<tr>
 <td>id</td>
-<td>The ID of the host to retrieve</td>
+<td>The ID or Host name to retrieve</td>
 </tr>
 </tbody></table>
 
@@ -967,8 +995,12 @@ You must replace <code>iwwTXK54aahsosrx5JK7hkTe</code> with your personal API ke
 </tr>
 </thead><tbody>
 <tr>
+<td>zone_name</td>
+<td>Zone Name</td>
+</tr>
+<tr>
 <td>id</td>
-<td>The ID of the host to delete</td>
+<td>The ID or Host name to delete</td>
 </tr>
 </tbody></table>
 
